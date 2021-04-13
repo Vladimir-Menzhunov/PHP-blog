@@ -1,0 +1,7 @@
+AddDefaultCharset utf-8
+#Подключаем модуль конфигураций
+RewriteEngine on
+#Проверка файл или директория, то запрос в index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php
